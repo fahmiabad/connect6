@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>HTAR Clinical Pharmacy — Q1 2026 Performance & Targets</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+*{margin:0;padding:0;box-sizing:border-box}
+:root{--bg:#fafaf8;--sf:#fff;--sf2:#f3f2ee;--tx:#1a1a18;--tx2:#6b6a65;--tx3:#9c9b96;--bd:#e4e3de;--bd2:#d0cfca;--blue:#2563eb;--bbg:#eff5ff;--btx:#1e40af;--gbg:#f0fdf4;--gtx:#166534;--abg:#fffbeb;--atx:#92400e;--rbg:#fef2f2;--rtx:#991b1b;--coral:#e8553a;--teal:#0d9488}
+body{font-family:'DM Sans',sans-serif;background:var(--bg);color:var(--tx);line-height:1.6;padding:2rem 1rem}
+.ct{max-width:1200px;margin:0 auto}
+.hd{margin-bottom:1.5rem;border-bottom:2px solid var(--tx);padding-bottom:1.25rem}
+.hd h1{font-size:1.4rem;font-weight:600;letter-spacing:-0.02em;margin-bottom:0.2rem}
+.hd .su{font-size:0.8rem;color:var(--tx2)}
+.bg0{display:inline-block;font-size:0.65rem;font-weight:500;padding:2px 8px;border-radius:2px;margin-left:6px;vertical-align:middle;letter-spacing:0.04em;text-transform:uppercase}
+.bg-d{background:var(--tx);color:var(--bg)}.bg-s{background:var(--bbg);color:var(--btx)}
+
+/* Toggle */
+.tg-wrap{display:flex;align-items:center;gap:12px;margin-bottom:1.25rem;padding:12px 16px;background:var(--sf);border:1px solid var(--bd);border-radius:6px}
+.tg-label{font-size:0.78rem;font-weight:500}
+.tg-desc{font-size:0.7rem;color:var(--tx3);margin-left:auto}
+.tg{position:relative;width:44px;height:24px;cursor:pointer}
+.tg input{opacity:0;width:0;height:0}
+.tg .sl{position:absolute;top:0;left:0;right:0;bottom:0;background:var(--bd2);border-radius:12px;transition:0.2s}
+.tg .sl:before{content:'';position:absolute;height:18px;width:18px;left:3px;bottom:3px;background:var(--sf);border-radius:50%;transition:0.2s}
+.tg input:checked+.sl{background:var(--blue)}
+.tg input:checked+.sl:before{transform:translateX(20px)}
+
+/* Summary cards */
+.ms{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:10px;margin-bottom:1.25rem}
+.mc{background:var(--sf);border:1px solid var(--bd);border-radius:6px;padding:12px 16px}
+.mc .ml{font-size:0.68rem;color:var(--tx3);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:2px}
+.mc .mv{font-family:'JetBrains Mono',monospace;font-size:1.3rem;font-weight:500}
+.mc .md{font-size:0.68rem;color:var(--tx2);margin-top:2px}
+.mc .md .up{color:var(--gtx)}.mc .md .dn{color:var(--rtx)}
+
+/* Yearly projection */
+.yr{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-bottom:1.25rem}
+.yr-card{background:var(--sf);border:1px solid var(--bd);border-radius:6px;padding:14px 16px}
+.yr-card .yr-h{font-size:0.68rem;color:var(--tx3);text-transform:uppercase;letter-spacing:0.05em;margin-bottom:6px;font-weight:500}
+.yr-card .yr-row{display:flex;justify-content:space-between;font-size:0.78rem;padding:3px 0;border-bottom:0.5px solid var(--bd)}
+.yr-card .yr-row:last-child{border-bottom:none}
+.yr-card .yr-val{font-family:'JetBrains Mono',monospace;font-weight:500}
+.yr-card .yr-ok{color:var(--gtx)}.yr-card .yr-gap{color:var(--rtx)}
+
+/* Table */
+.se{font-size:0.68rem;text-transform:uppercase;letter-spacing:0.1em;color:var(--tx3);margin:1.5rem 0 0.5rem;padding-bottom:0.2rem;border-bottom:1px solid var(--bd)}
+.tabs{display:flex;gap:0;border-bottom:1px solid var(--bd2)}
+.tab{padding:8px 16px;font-size:0.78rem;font-weight:500;cursor:pointer;border:none;background:none;color:var(--tx3);border-bottom:2px solid transparent;transition:all 0.15s}
+.tab:hover{color:var(--tx)}.tab.ac{color:var(--tx);border-bottom-color:var(--tx)}
+.tw{overflow-x:auto;margin-bottom:1rem}
+table{width:100%;border-collapse:collapse;font-size:0.76rem}
+thead th{font-weight:500;font-size:0.63rem;text-transform:uppercase;letter-spacing:0.05em;color:var(--tx3);padding:6px 4px;text-align:center;border-bottom:2px solid var(--bd2);white-space:nowrap}
+thead th.l{text-align:left}
+thead th.h1{border-bottom-color:var(--blue)}
+thead th.h2{border-bottom-color:var(--teal)}
+thead th.h3{border-bottom-color:var(--coral)}
+tbody td{padding:5px 4px;text-align:center;border-bottom:1px solid var(--bd);font-variant-numeric:tabular-nums;vertical-align:middle}
+tbody td.l{text-align:left}
+tbody td.dn{font-weight:500;white-space:nowrap}
+tbody tr:hover{background:var(--sf2)}
+tbody tr.dh td{background:var(--sf2);font-weight:600;font-size:0.7rem;border-bottom:1px solid var(--bd2);padding:4px}
+tfoot td{font-weight:600;border-top:2px solid var(--bd2);background:var(--sf2);padding:6px 4px;text-align:center}
+.bm{display:inline-block;padding:1px 6px;border-radius:3px;font-size:0.66rem;font-weight:500;font-family:'JetBrains Mono',monospace}
+.b-g{background:var(--gbg);color:var(--gtx)}.b-a{background:var(--abg);color:var(--atx)}.b-r{background:var(--rbg);color:var(--rtx)}
+
+/* Chart */
+.cw{position:relative;width:100%;height:260px;background:var(--sf);border:1px solid var(--bd);border-radius:6px;padding:12px;margin-top:0.5rem}
+.lg{display:flex;flex-wrap:wrap;gap:12px;font-size:0.68rem;color:var(--tx2)}
+.lg span{display:flex;align-items:center;gap:4px}
+.lg .sw{width:10px;height:10px;border-radius:2px}
+
+.ft{margin-top:2rem;padding-top:0.75rem;border-top:1px solid var(--bd);font-size:0.66rem;color:var(--tx3);display:flex;justify-content:space-between;flex-wrap:wrap;gap:6px}
+</style>
+</head>
+<body>
+<div class="ct">
+<div class="hd"><h1>Q1 2026 performance & target framework <span class="bg0" id="mode-badge"></span></h1><div class="su">HTAR Clinical Pharmacy Section · Borang PF Klinikal Jan–Mar 2026 · Fixed establishment: 26 FT + 1 PT = 27</div></div>
+
+<div class="tg-wrap">
+<span class="tg-label">Standard KPI (uniform 45/45/45)</span>
+<label class="tg"><input type="checkbox" id="mode-toggle" checked onchange="toggleMode()"><span class="sl"></span></label>
+<span class="tg-label">Dynamic KPI (discipline-adjusted)</span>
+<span class="tg-desc" id="mode-desc"></span>
+</div>
+
+<div class="ms" id="sm"></div>
+
+<div class="se">Yearly projection (Q1 actual × 4)</div>
+<div class="yr" id="yr"></div>
+
+<div class="se">Individual pharmacist performance</div>
+<div class="tabs" id="tabs"></div>
+<div class="tw"><table><thead id="th"></thead><tbody id="td"></tbody><tfoot id="tf"></tfoot></table></div>
+
+<div class="se">Monthly target contribution by discipline</div>
+<div class="lg"><span><span class="sw" style="background:#2563eb"></span>CP1</span><span><span class="sw" style="background:#0d9488"></span>CP2</span><span><span class="sw" style="background:#e8553a"></span>Counselling</span></div>
+<div class="cw"><canvas id="ch" role="img" aria-label="Stacked bar chart of discipline target contributions"></canvas></div>
+
+<div class="ft"><span>Prepared by: Fahmi Hassan, PhD · Head of Clinical Pharmacy Section, HTAR</span><span>Ref: KKM Guideline on Ward Pharmacy Activities (2023)</span></div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/4.4.1/chart.umd.js"></script>
+<script>
+const MS=['JAN','FEB','MAR'];
+const DO=['Medical','Paeds','Anaesth','Ortho','Surgical','O&G','Psychiatry','Emergency','MDSU'];
+const HC={Medical:15,Paeds:3,Anaesth:2,Ortho:1,Surgical:1,'O&G':1,Psychiatry:1,Emergency:2,MDSU:1};
+
+// Dynamic targets per discipline [cp1, cp2, couns]
+const DYN={Medical:[50,46,51],Paeds:[25,40,35],Anaesth:[10,55,5],Ortho:[30,45,50],Surgical:[50,46,51],'O&G':[50,46,51],Psychiatry:[50,46,51],Emergency:[80,35,20],MDSU:[15,15,15]};
+
+// Standard targets
+const STD={Medical:[45,45,45],Paeds:[45,45,45],Anaesth:[45,45,45],Ortho:[45,45,45],Surgical:[45,45,45],'O&G':[45,45,45],Psychiatry:[45,45,45],Emergency:[45,45,45],MDSU:[15,15,15]};
+
+// Yearly targets
+const YR_CP1=14220, YR_CP2=14220, YR_CO=13650;
+
+let isDynamic=true, cm='JAN', ci=null;
+
+const D={
+JAN:[
+{p:'6E (Vicky)',d:'Medical',a:69,b:45,c:41},{p:'6E (LooXL)',d:'Medical',a:55,b:30,c:38},{p:'6F (LouJY)',d:'Medical',a:20,b:30,c:60},{p:'7A (Shook Ling)',d:'Medical',a:46,b:40,c:36},{p:'7A (Sue Wen)',d:'Medical',a:45,b:30,c:50},{p:'7B (Adiba)',d:'Medical',a:48,b:48,c:45},{p:'7B (Ardila)',d:'Medical',a:42,b:30,c:36},{p:'7C (Dalila)',d:'Medical',a:34,b:45,c:30},{p:'7C (Tom)',d:'Medical',a:54,b:61,c:39},{p:'8A (Geetha)',d:'Medical',a:38,b:28,c:35,note:'Transferred out after Jan'},{p:'8A (ToonWY)',d:'Medical',a:66,b:36,c:86},{p:'8B (Ainsyaz)',d:'Medical',a:71,b:45,c:58},{p:'Vishalini',d:'Medical',a:62,b:45,c:63},{p:'Daveena',d:'Medical',a:37,b:30,c:8},{p:'6B (Kavidha)',d:'Medical',a:46,b:45,c:45},{p:'6B (Jessie)',d:'Medical',a:75,b:64,c:87},{p:'Elaine',d:'Medical',a:59,b:57,c:46},{p:'Yeo',d:'Medical',a:56,b:32,c:44},
+{p:'7F (Novell)',d:'Paeds',a:60,b:68,c:153},{p:'NICU (Wahida)',d:'Paeds',a:12,b:25,c:6},{p:'7E (Amirah)',d:'Paeds',a:6,b:15,c:9},{p:'PICU (Amirah)',d:'Paeds',a:2,b:20,c:2},
+{p:'3A+3B (Mun)',d:'Anaesth',a:0,b:36,c:0},{p:'5C (Farizh)',d:'Anaesth',a:0,b:25,c:0},
+{p:'5B (Zawani)',d:'Ortho',a:24,b:20,c:0},{p:'5B (Yeo)',d:'Ortho',a:9,b:6,c:44},
+{p:'1A (Kokila)',d:'Surgical',a:44,b:65,c:48},{p:'8E (Ker Min)',d:'O&G',a:52,b:55,c:55},{p:'PSY (Larry)',d:'Psychiatry',a:25,b:46,c:72},
+{p:'Shirlyn',d:'Emergency',a:132,b:16,c:24},{p:'LJ',d:'Emergency',a:77,b:10,c:10},
+{p:'MDSU (Fahmi)',d:'MDSU',a:13,b:0,c:35}],
+FEB:[
+{p:'6E (Vicky)',d:'Medical',a:72,b:45,c:39},{p:'6E (XL)',d:'Medical',a:33,b:30,c:40},{p:'6F (LouJY)',d:'Medical',a:15,b:30,c:33},{p:'7A (Shook Ling)',d:'Medical',a:45,b:45,c:44},{p:'7A (Sue Wen)',d:'Medical',a:45,b:45,c:46},{p:'7B (Elaine)',d:'Medical',a:55,b:42,c:42},{p:'7B (Adiba)',d:'Medical',a:60,b:41,c:78},{p:'7C (Dalila)',d:'Medical',a:39,b:37,c:34},{p:'7C (Tom)',d:'Medical',a:19,b:34,c:18},{p:'8A (ToonWY)',d:'Medical',a:59,b:31,c:51},{p:'8B (Ainsyaz)',d:'Medical',a:89,b:61,c:82},{p:'6B (Kavidha)',d:'Medical',a:46,b:46,c:66},{p:'6B (Jessie)',d:'Medical',a:46,b:35,c:25},{p:'Daveena',d:'Medical',a:60,b:25,c:16},{p:'Visha',d:'Medical',a:71,b:32,c:64},
+{p:'7F (Novell)',d:'Paeds',a:62,b:59,c:80},{p:'NICU (Wahida)',d:'Paeds',a:5,b:20,c:2},{p:'7E (Amirah)',d:'Paeds',a:27,b:26,c:28},{p:'PICU (Amirah)',d:'Paeds',a:4,b:23,c:0},
+{p:'3A+3B (Munirah)',d:'Anaesth',a:2,b:39,c:0},{p:'5C (Farizh)',d:'Anaesth',a:6,b:34,c:0},
+{p:'5B (Yeo)',d:'Ortho',a:30,b:48,c:66},
+{p:'1A (Kokila)',d:'Surgical',a:44,b:45,c:74},{p:'8E (Ker Min)',d:'O&G',a:39,b:39,c:14},{p:'PSY (Ardila)',d:'Psychiatry',a:27,b:47,c:62},
+{p:'Shirlyn',d:'Emergency',a:91,b:16,c:14},{p:'Zawani',d:'Emergency',a:60,b:10,c:5},
+{p:'MDSU (Fahmi)',d:'MDSU',a:10,b:0,c:19}],
+MAR:[
+{p:'6F (Vicky)',d:'Medical',a:90,b:45,c:32},{p:'6E (LouJY)',d:'Medical',a:46,b:52,c:95},{p:'7A (Shook Ling)',d:'Medical',a:58,b:58,c:54},{p:'7A (ToonWY)',d:'Medical',a:44,b:54,c:36},{p:'7B (Adiba)',d:'Medical',a:68,b:31,c:57},{p:'7B (Tom)',d:'Medical',a:61,b:62,c:44},{p:'7C (Dalila)',d:'Medical',a:16,b:30,c:15},{p:'7C (Daveena)',d:'Medical',a:40,b:13,c:15},{p:'8A (Sue Wen)',d:'Medical',a:45,b:30,c:48},{p:'8A (Elaine)',d:'Medical',a:82,b:47,c:70},{p:'8B (Ainsyaz)',d:'Medical',a:28,b:20,c:22},{p:'8B (Vishalini)',d:'Medical',a:86,b:30,c:54},{p:'6B (Kavidha)',d:'Medical',a:44,b:45,c:49},{p:'6B (Jessie)',d:'Medical',a:67,b:43,c:31},{p:'Fasihah',d:'Medical',a:28,b:13,c:4},
+{p:'7F (Novell)',d:'Paeds',a:40,b:63,c:68},{p:'NICU (Wahida)',d:'Paeds',a:0,b:21,c:0},{p:'7E (Amirah)',d:'Paeds',a:12,b:22,c:7},{p:'PICU (Amirah)',d:'Paeds',a:5,b:22,c:0},
+{p:'3A+3B (Mun)',d:'Anaesth',a:4,b:26,c:0},{p:'5C (LooXL)',d:'Anaesth',a:11,b:53,c:2},
+{p:'5B (Yeo)',d:'Ortho',a:30,b:50,c:91},
+{p:'1A (Kokila)',d:'Surgical',a:45,b:45,c:71},{p:'8E (Ker Min)',d:'O&G',a:46,b:48,c:36},{p:'PSY (Ardila)',d:'Psychiatry',a:24,b:36,c:62},
+{p:'Shirlyn',d:'Emergency',a:102,b:16,c:16},{p:'Zawani',d:'Emergency',a:55,b:5,c:7},
+{p:'MDSU (Fahmi)',d:'MDSU',a:19,b:0,c:19}]
+};
+
+function tg(dept){return isDynamic?(DYN[dept]||[50,46,51]):(STD[dept]||[45,45,45]);}
+function bd(v,t){const g=v-t;return g>=0?'<span class="bm b-g">+'+g+'</span>':g>=-10?'<span class="bm b-a">'+g+'</span>':'<span class="bm b-r">'+g+'</span>';}
+function dsort(x,y){const a=DO.indexOf(x.d),b=DO.indexOf(y.d);return(a<0?99:a)-(b<0?99:b);}
+function vf(v){return v>=0?'<span class="up">+'+v+'</span>':'<span class="dn">'+v+'</span>';}
+function n(v){return v.toLocaleString();}
+
+// Q1 totals
+function q1totals(){let a=0,b=0,c=0;MS.forEach(m=>D[m].forEach(r=>{a+=r.a;b+=r.b;c+=r.c;}));return{a,b,c};}
+
+// Monthly cumulative target from fixed headcount
+function mTarget(){let t1=0,t2=0,t3=0;for(const d in HC){const t=tg(d);t1+=t[0]*HC[d];t2+=t[1]*HC[d];t3+=t[2]*HC[d];}return{t1,t2,t3};}
+
+function toggleMode(){isDynamic=document.getElementById('mode-toggle').checked;renderAll();}
+
+function renderAll(){
+  const mb=document.getElementById('mode-badge');
+  const md=document.getElementById('mode-desc');
+  if(isDynamic){mb.className='bg0 bg-d';mb.textContent='Dynamic KPI';md.textContent='Anaesth/ED/Paeds/Ortho adjusted, budget-neutral';}
+  else{mb.className='bg0 bg-s';mb.textContent='Standard KPI';md.textContent='Uniform 45/45/45 (FT), 15/15/15 (PT)';}
+  renderTabs();renderTable();renderYearly();renderChart();
+}
+
+function renderTabs(){
+  document.getElementById('tabs').innerHTML=MS.map(m=>'<button class="tab '+(m===cm?'ac':'')+'" onclick="go(\''+m+'\')">'+m+' 2026</button>').join('')+'<button class="tab '+('Q1'===cm?'ac':'')+'" onclick="go(\'Q1\')">Q1 Total</button>';
+}
+function go(m){cm=m;renderTabs();renderTable();}
+
+function renderYearly(){
+  const q=q1totals();
+  const mt=mTarget();
+  const yrT1=mt.t1*12, yrT2=mt.t2*12, yrT3=mt.t3*12;
+  const proj1=q.a*4, proj2=q.b*4, proj3=q.c*4;
+  const gap1=yrT1-q.a, gap2=yrT2-q.b, gap3=yrT3-q.c; // remaining needed
+  const perM1=Math.ceil(gap1/9), perM2=Math.ceil(gap2/9), perM3=Math.ceil(gap3/9);
+
+  function card(label,color,qAct,yrTgt,projected,remaining,perMonth){
+    const ok=projected>=yrTgt;
+    return `<div class="yr-card" style="border-top:3px solid ${color}">
+      <div class="yr-h">${label}</div>
+      <div class="yr-row"><span>Q1 actual</span><span class="yr-val">${n(qAct)}</span></div>
+      <div class="yr-row"><span>Yearly target</span><span class="yr-val">${n(yrTgt)}</span></div>
+      <div class="yr-row"><span>Projected (Q1×4)</span><span class="yr-val ${ok?'yr-ok':'yr-gap'}">${n(projected)}</span></div>
+      <div class="yr-row"><span>Status</span><span class="yr-val ${ok?'yr-ok':'yr-gap'}">${ok?'On track':'Below by '+n(yrTgt-projected)}</span></div>
+      <div class="yr-row"><span>Remaining (9 months)</span><span class="yr-val">${n(remaining)}</span></div>
+      <div class="yr-row"><span>Needed per month</span><span class="yr-val ${perMonth<=mt.t1?'yr-ok':'yr-gap'}">${n(perMonth)}</span></div>
+    </div>`;
+  }
+
+  document.getElementById('yr').innerHTML=
+    card('CP1 — Medication history','#2563eb',q.a,yrT1,proj1,gap1,perM1)+
+    card('CP2 — Pharmacotherapy review','#0d9488',q.b,yrT2,proj2,gap2,perM2)+
+    card('Counselling','#e8553a',q.c,YR_CO,proj3,YR_CO-q.c,Math.ceil((YR_CO-q.c)/9));
+}
+
+function renderTable(){
+  const th=document.getElementById('th'),tb=document.getElementById('td'),tf=document.getElementById('tf');
+  th.innerHTML='<tr><th class="l" rowspan="2">Pharmacist</th><th class="l" rowspan="2">Dept</th><th colspan="3" class="h1">CP1</th><th colspan="3" class="h2">CP2</th><th colspan="3" class="h3">Counselling</th></tr><tr><th class="h1">Act</th><th class="h1">Tgt</th><th class="h1">Gap</th><th class="h2">Act</th><th class="h2">Tgt</th><th class="h2">Gap</th><th class="h3">Act</th><th class="h3">Tgt</th><th class="h3">Gap</th></tr>';
+
+  let rows=[];
+  if(cm==='Q1'){
+    const mg={};MS.forEach(m=>D[m].forEach(r=>{const k=r.p+'|'+r.d;if(!mg[k])mg[k]={p:r.p,d:r.d,a:0,b:0,c:0,mn:0,note:r.note||null};mg[k].a+=r.a;mg[k].b+=r.b;mg[k].c+=r.c;mg[k].mn++;if(r.note)mg[k].note=r.note;}));
+    rows=Object.values(mg);
+  }else rows=(D[cm]||[]).map(r=>({...r,mn:1}));
+  rows.sort(dsort);
+  tb.innerHTML='';
+  let sa=0,sb=0,sc=0,lastD='';
+
+  rows.forEach(r=>{
+    if(r.d!==lastD){
+      lastD=r.d;const t=tg(r.d);const h=HC[r.d]||1;const mult=cm==='Q1'?3:1;
+      const dr=document.createElement('tr');dr.className='dh';
+      dr.innerHTML='<td class="l" colspan="2">'+r.d+' <span style="font-weight:400;color:var(--tx3);font-size:0.66rem">('+h+' staff · '+t[0]+'/'+t[1]+'/'+t[2]+' per person)</span></td><td colspan="3" style="font-size:0.66rem;color:var(--tx3)">Dept: '+(t[0]*h*mult)+'</td><td colspan="3" style="font-size:0.66rem;color:var(--tx3)">Dept: '+(t[1]*h*mult)+'</td><td colspan="3" style="font-size:0.66rem;color:var(--tx3)">Dept: '+(t[2]*h*mult)+'</td>';
+      tb.appendChild(dr);
+    }
+    const t=tg(r.d);const m=r.mn||1;
+    const t1=t[0]*m,t2=t[1]*m,t3=t[2]*m;
+    sa+=r.a;sb+=r.b;sc+=r.c;
+    const nt=r.note?'<span style="color:var(--tx3);font-size:0.66rem;font-style:italic"> — '+r.note+'</span>':'';
+    const ml=cm==='Q1'?' <span style="color:var(--tx3);font-size:0.66rem">('+r.mn+'m)</span>':'';
+    const tr=document.createElement('tr');
+    tr.innerHTML='<td class="l dn">'+r.p+ml+nt+'</td><td class="l" style="font-size:0.68rem;color:var(--tx2)">'+r.d+'</td><td>'+r.a+'</td><td style="color:var(--tx3)">'+t1+'</td><td>'+bd(r.a,t1)+'</td><td>'+r.b+'</td><td style="color:var(--tx3)">'+t2+'</td><td>'+bd(r.b,t2)+'</td><td>'+r.c+'</td><td style="color:var(--tx3)">'+t3+'</td><td>'+bd(r.c,t3)+'</td>';
+    tb.appendChild(tr);
+  });
+
+  const mult=cm==='Q1'?3:1;
+  const mt=mTarget();
+  const tt1=mt.t1*mult,tt2=mt.t2*mult,tt3=mt.t3*mult;
+
+  tf.innerHTML='<tr><td class="l" colspan="2" style="text-align:left;font-weight:600">Actual total</td><td style="font-weight:600">'+sa+'</td><td></td><td></td><td style="font-weight:600">'+sb+'</td><td></td><td></td><td style="font-weight:600">'+sc+'</td><td></td><td></td></tr><tr style="background:none"><td class="l" colspan="2" style="text-align:left;font-size:0.7rem;color:var(--tx2);border-top:none">Cumulative target (27 staff × '+mult+'m)</td><td style="border-top:none">'+tt1+'</td><td style="border-top:none"></td><td style="border-top:none">'+vf(sa-tt1)+'</td><td style="border-top:none">'+tt2+'</td><td style="border-top:none"></td><td style="border-top:none">'+vf(sb-tt2)+'</td><td style="border-top:none">'+tt3+'</td><td style="border-top:none"></td><td style="border-top:none">'+vf(sc-tt3)+'</td></tr>';
+
+  // Summary cards
+  document.getElementById('sm').innerHTML=
+    '<div class="mc"><div class="ml">Establishment</div><div class="mv">27</div><div class="md">26 FT + 1 PT (fixed)</div></div>'+
+    '<div class="mc"><div class="ml">CP1</div><div class="mv">'+n(sa)+'</div><div class="md">target '+n(tt1)+' ('+vf(sa-tt1)+')</div></div>'+
+    '<div class="mc"><div class="ml">CP2</div><div class="mv">'+n(sb)+'</div><div class="md">target '+n(tt2)+' ('+vf(sb-tt2)+')</div></div>'+
+    '<div class="mc"><div class="ml">Counselling</div><div class="mv">'+n(sc)+'</div><div class="md">target '+n(tt3)+' ('+vf(sc-tt3)+')</div></div>';
+}
+
+function renderChart(){
+  const ctx=document.getElementById('ch');
+  if(ci)ci.destroy();
+  const c1=DO.map(d=>tg(d)[0]*(HC[d]||1));
+  const c2=DO.map(d=>tg(d)[1]*(HC[d]||1));
+  const co=DO.map(d=>tg(d)[2]*(HC[d]||1));
+  ci=new Chart(ctx,{type:'bar',data:{labels:DO,datasets:[
+    {label:'CP1',data:c1,backgroundColor:'#2563eb',borderRadius:2},
+    {label:'CP2',data:c2,backgroundColor:'#0d9488',borderRadius:2},
+    {label:'Counselling',data:co,backgroundColor:'#e8553a',borderRadius:2}
+  ]},options:{responsive:true,maintainAspectRatio:false,plugins:{legend:{display:false}},scales:{
+    x:{stacked:true,grid:{display:false},ticks:{font:{family:'DM Sans',size:11}}},
+    y:{stacked:true,grid:{color:'rgba(0,0,0,0.05)'},ticks:{font:{family:'JetBrains Mono',size:11}},title:{display:true,text:'Monthly contribution to cumulative target',font:{family:'DM Sans',size:11},color:'#9c9b96'}}
+  }}});
+}
+
+renderAll();
+</script>
+</body>
+</html>
