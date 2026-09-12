@@ -296,6 +296,14 @@
   }
   .download-card h3 { font-size: 0.95rem; font-weight: 600; color: var(--text); }
   .download-card p { font-size: 0.83rem; color: var(--text-light); flex: 1; line-height: 1.5; }
+  .download-grid.available-materials {
+    grid-template-columns: repeat(2, minmax(0, 1fr)); margin-bottom: 1.25rem;
+  }
+  .dl-meta { font-size: 0.75rem; color: var(--text-light); }
+  .dl-actions { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; align-items: center; margin-top: 0.75rem; }
+  .dl-actions .btn-primary { font-size: 0.83rem; padding: 0.65rem 1rem; }
+  .dl-view { font-size: 0.83rem; font-weight: 600; color: var(--green-dark); text-decoration: underline; }
+  .dl-actions a:focus-visible { outline: 3px solid var(--green-dark); outline-offset: 3px; }
   .dl-note {
     font-size: 0.75rem; color: var(--text-light);
     background: var(--off-white); border-radius: 8px;
@@ -425,6 +433,7 @@
     .problem-grid, .steps-grid, .evidence-grid,
     .download-grid, .training-layout, .collab-grid,
     .quotes-grid { grid-template-columns: 1fr; }
+    .download-grid.available-materials { grid-template-columns: 1fr; }
     .about-inner { flex-direction: column; }
     .nav-links { display: none; }
     .stat-row { flex-wrap: wrap; }
@@ -612,7 +621,29 @@
   <div class="section-inner">
     <div class="section-label">Resources</div>
     <h2 class="section-title">Download the Tools</h2>
-    <p class="section-intro">Our downloadable tools and resources are currently being finalised for public release. Register your interest and we will notify you as soon as they are available.</p>
+    <p class="section-intro">Download the CONNECT-6 training deck and quick reference for workshops and medication counselling practice. Additional tools are being prepared for release.</p>
+    <div class="download-grid available-materials" id="training-materials">
+      <div class="download-card">
+        <div class="dl-icon" aria-hidden="true">📊</div>
+        <h3>CONNECT-6 Training Deck</h3>
+        <p>The workshop slide deck introducing the CONNECT-6 framework, with counselling techniques, worked examples, and practice activities.</p>
+        <span class="dl-meta">PDF · 79 pages · 1.4 MB</span>
+        <div class="dl-actions">
+          <a href="materials/CONNECT-6_Training_Deck.pdf" class="btn-primary" download aria-label="Download CONNECT-6 Training Deck (PDF)">Download PDF</a>
+          <a href="materials/CONNECT-6_Training_Deck.pdf" class="dl-view" target="_blank" rel="noopener noreferrer" aria-label="View CONNECT-6 Training Deck (PDF, opens in a new tab)">View PDF ↗</a>
+        </div>
+      </div>
+      <div class="download-card">
+        <div class="dl-icon" aria-hidden="true">📄</div>
+        <h3>Quick Reference: Counselling Card</h3>
+        <p>A printable A4 guide to the six CONNECT-6 steps, with practical prompts and a worked patient conversation for use during training and practice.</p>
+        <span class="dl-meta">PDF · 4 A4 pages · 245 KB</span>
+        <div class="dl-actions">
+          <a href="materials/CONNECT-6_Quick_Reference.pdf" class="btn-primary" download aria-label="Download CONNECT-6 Quick Reference (PDF)">Download PDF</a>
+          <a href="materials/CONNECT-6_Quick_Reference.pdf" class="dl-view" target="_blank" rel="noopener noreferrer" aria-label="View CONNECT-6 Quick Reference (PDF, opens in a new tab)">View PDF ↗</a>
+        </div>
+      </div>
+    </div>
     <div class="download-grid">
       <div class="download-card">
         <div class="dl-icon">📋</div>
@@ -655,7 +686,7 @@
   <div class="section-inner">
     <div class="section-label">Training</div>
     <h2 class="section-title">Learn From the Source</h2>
-    <p class="section-intro">Interested in bringing CONNECT-6 training to your institution or professional society? <a href="https://mail.google.com/mail/?view=cm&to=drfahmihassan@gmail.com&su=CONNECT-6+Training+Enquiry" target="_blank" style="color:var(--green-dark);font-weight:600;">Get in touch with the team</a> to discuss formats and arrangements.</p>
+    <p class="section-intro">Start with the <a href="#training-materials" style="color:var(--green-dark);font-weight:600;">training deck and quick reference</a>. Interested in bringing CONNECT-6 training to your institution or professional society? <a href="https://mail.google.com/mail/?view=cm&to=drfahmihassan@gmail.com&su=CONNECT-6+Training+Enquiry" target="_blank" style="color:var(--green-dark);font-weight:600;">Get in touch with the team</a> to discuss formats and arrangements.</p>
     <div style="max-width:520px;margin:0 auto;">
       <div class="training-cta">
         <h3>Enquire About Training</h3>
