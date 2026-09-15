@@ -516,10 +516,21 @@
   .download-card { border-top: 3px solid var(--blue); }
   .download-card:nth-child(even) { border-top-color: var(--green); }
   .resource-registration {
-    display: grid; grid-template-columns: .85fr 1.15fr; gap: 2.5rem;
+    display: block;
     margin-top: 2rem; padding: 2rem; background: white; border: 1px solid var(--border);
     border-radius: var(--radius);
   }
+  .registration-panel { margin-top: 1.25rem; }
+  .registration-panel summary {
+    display: list-item; list-style-position: inside; cursor: pointer; width: fit-content;
+    padding: .75rem 1.25rem; border-radius: 24px; background: var(--green);
+    color: white; font-weight: 600; font-size: .9rem;
+  }
+  .registration-panel summary:focus-visible { outline: 3px solid var(--blue-dark); outline-offset: 4px; }
+  .registration-panel .form-note { margin: 1rem 0; }
+  .registration-panel a { color: var(--blue-dark); }
+  .registration-embed { display: block; width: 100%; max-width: 760px; height: 1300px; margin: 0 auto; border: 0; }
+  @media (max-width: 480px) { .registration-embed { height: 1550px; } }
   .resource-registration h3 {
     font-family: 'Lora', serif; font-size: 1.35rem; color: var(--text); margin-bottom: .55rem;
   }
@@ -771,32 +782,12 @@
         <h3>Using CONNECT-6 in practice or training?</h3>
         <p>Tell us where the materials are being used. You can also choose to receive occasional updates about revised resources and future training.</p>
       </div>
-      <form id="resource-use-form">
-        <div class="form-grid">
-          <label>Email address
-            <input type="email" name="email" autocomplete="email" required>
-          </label>
-          <label>Institution or workplace
-            <input type="text" name="institution" autocomplete="organization" required>
-          </label>
-          <label class="form-wide">How do you plan to use the materials?
-            <select name="intended_use" required>
-              <option value="">Select one</option>
-              <option>Clinical practice</option>
-              <option>Staff training or workshop</option>
-              <option>Teaching or curriculum</option>
-              <option>Research or evaluation</option>
-              <option>Other</option>
-            </select>
-          </label>
-          <label class="form-check form-wide">
-            <input type="checkbox" name="updates">
-            <span>Email me occasional CONNECT-6 resource and training updates.</span>
-          </label>
-        </div>
-        <button type="submit" class="btn-primary">Share how you’re using CONNECT-6</button>
-        <p class="form-note">Optional. Submitting opens your email app with the information addressed to the CONNECT-6 team. Your details will be used only to understand resource use and, if selected, to send CONNECT-6 updates.</p>
-      </form>
+      <details class="registration-panel">
+        <summary>Share how you’re using CONNECT-6</summary>
+        <p class="form-note">Registration is optional. Responses are saved privately with the CONNECT-6 team through Google Forms. Email updates are a separate opt-in.</p>
+        <iframe class="registration-embed" src="https://docs.google.com/forms/d/e/1FAIpQLSdoeJFgegKDrJ9820_K23HRdEVDbYzd9QlcITpkHElwkIn7MQ/viewform?embedded=true" title="CONNECT-6 resource-use registration form" width="640" height="1300" loading="lazy">Loading…</iframe>
+        <p class="form-note">Having trouble with the form? <a href="https://docs.google.com/forms/d/e/1FAIpQLSdoeJFgegKDrJ9820_K23HRdEVDbYzd9QlcITpkHElwkIn7MQ/viewform" target="_blank" rel="noopener noreferrer">Open it in a new tab ↗</a></p>
+      </details>
     </div>
   </div>
 </section>
@@ -1009,21 +1000,6 @@
       });
     });
 
-    var form = document.getElementById('resource-use-form');
-    if (form) {
-      form.addEventListener('submit', function (event) {
-        event.preventDefault();
-        var data = new FormData(form);
-        var body = [
-          'Email: ' + data.get('email'),
-          'Institution or workplace: ' + data.get('institution'),
-          'Intended use: ' + data.get('intended_use'),
-          'Updates opt-in: ' + (data.get('updates') ? 'Yes' : 'No')
-        ].join('\n');
-        window.location.href = 'mailto:drfahmihassan@gmail.com?subject=' +
-          encodeURIComponent('CONNECT-6 resource use') + '&body=' + encodeURIComponent(body);
-      });
-    }
   }());
 </script>
 
