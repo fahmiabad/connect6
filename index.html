@@ -299,6 +299,15 @@
   .download-grid.available-materials {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
+  .dl-audience {
+    align-self: flex-start; padding: .25rem .6rem; border-radius: 6px;
+    background: var(--blue-light); color: var(--blue-dark);
+    font-size: .75rem; font-weight: 600; line-height: 1.4;
+  }
+  .download-card:nth-child(even) .dl-audience {
+    background: var(--green-light); color: var(--green-dark);
+  }
+  .dl-release { color: var(--text-mid); font-size: .75rem; }
   .dl-meta { font-size: 0.75rem; color: var(--text-light); }
   .dl-actions { display: flex; flex-wrap: wrap; gap: 0.75rem 1rem; align-items: center; margin-top: 0.75rem; }
   .dl-actions .btn-primary { font-size: 0.83rem; padding: 0.65rem 1rem; }
@@ -717,9 +726,11 @@
     <div class="download-grid available-materials" id="training-materials">
       <div class="download-card">
         <div class="dl-icon" aria-hidden="true">📊</div>
+        <span class="dl-audience">For trainers</span>
         <h3>CONNECT-6 Training Deck</h3>
         <p>The workshop slide deck introducing the CONNECT-6 framework, with counselling techniques, worked examples, and practice activities.</p>
         <span class="dl-meta">PDF · 79 pages · 1.4 MB</span>
+        <span class="dl-release">Added <time datetime="2026-09-12">12 September 2026</time></span>
         <div class="dl-actions">
           <a href="materials/CONNECT-6_Training_Deck.pdf" class="btn-primary" download data-resource="training_deck" data-action="download" aria-label="Download CONNECT-6 Training Deck (PDF)">Download PDF</a>
           <a href="materials/CONNECT-6_Training_Deck.pdf" class="dl-view" data-resource="training_deck" data-action="view" target="_blank" rel="noopener noreferrer" aria-label="View CONNECT-6 Training Deck (PDF, opens in a new tab)">View PDF ↗</a>
@@ -727,9 +738,11 @@
       </div>
       <div class="download-card">
         <div class="dl-icon" aria-hidden="true">📄</div>
+        <span class="dl-audience">For everyday practice</span>
         <h3>Quick Reference: Counselling Card</h3>
         <p>A printable A4 guide to the six CONNECT-6 steps, with practical prompts and a worked patient conversation for use during training and practice.</p>
         <span class="dl-meta">PDF · 4 A4 pages · 245 KB</span>
+        <span class="dl-release">Added <time datetime="2026-09-12">12 September 2026</time></span>
         <div class="dl-actions">
           <a href="materials/CONNECT-6_Quick_Reference.pdf" class="btn-primary" download data-resource="quick_reference" data-action="download" aria-label="Download CONNECT-6 Quick Reference (PDF)">Download PDF</a>
           <a href="materials/CONNECT-6_Quick_Reference.pdf" class="dl-view" data-resource="quick_reference" data-action="view" target="_blank" rel="noopener noreferrer" aria-label="View CONNECT-6 Quick Reference (PDF, opens in a new tab)">View PDF ↗</a>
@@ -737,9 +750,11 @@
       </div>
       <div class="download-card">
         <div class="dl-icon" aria-hidden="true">📋</div>
+        <span class="dl-audience">For assessors</span>
         <h3>Competency Assessment Checklist</h3>
         <p>A 27-item checklist for observing and scoring pharmacist counselling skills before and after CONNECT-6 training, with space for feedback.</p>
         <span class="dl-meta">PDF · 3 A4 pages · 167 KB</span>
+        <span class="dl-release">Added <time datetime="2026-09-12">12 September 2026</time></span>
         <div class="dl-actions">
           <a href="materials/CONNECT-6_Competency_Checklist_A4.pdf" class="btn-primary" download data-resource="competency_checklist" data-action="download" aria-label="Download CONNECT-6 Competency Checklist (PDF)">Download PDF</a>
           <a href="materials/CONNECT-6_Competency_Checklist_A4.pdf" class="dl-view" data-resource="competency_checklist" data-action="view" target="_blank" rel="noopener noreferrer" aria-label="View CONNECT-6 Competency Checklist (PDF, opens in a new tab)">View PDF ↗</a>
